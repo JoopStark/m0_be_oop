@@ -1,15 +1,104 @@
+# class EscapeCar
+#     def initialize(color)
+#       @color = color
+#       @wheels = 4
+#       @gear = "park"
+#     end
+  
+#     def change_gear(new_gear)
+#       @gear = new_gear
+#     end
+#   end
+  
+#   car1 = EscapeCar.new("blue")
+#   p car1
+#   car1.change_gear("drive")
+#   p car1
+
+#   Dino Class Specifications
+# In a new file, write a class called Dino.
+# It should have a dynamic name attribute.
+# It should have a dynamic period attribute.
+# It should have a color attribute, that is green for every instance.
+# It should have a roar method that roars a sentence including its name, when called.
+# It should have a diet attribute that defaults to "vegetarian" but, if data is passed in, it can be dynamic.
+# It should have a print_welcome method that prints a sentence welcoming the Dino to the world. 
+# The welcome message should vary based on the period the Dino existed (Triassic, Jurassic, and Cretaceous are examples).
+
+# class Dino
+#     attr_reader :name
+#     def initialize(name, period, diet = "vegetairan")
+#         @name = name
+#         @period = period
+#         @color = "green"
+#         @diet = diet
+#     end
+
+#     def change_diet(new_diet)
+#         @diet = new_diet
+#     end
+
+#     def roar
+#         "Fear me I am #{@name}!!!"
+#     end
+
+#     def welcome
+#         "You are in the #{@period}!"
+#     end
+#  end
+
+# dino1 = Dino.new("Stego", "Jurassic")
+# p dino1
+# dino1.change_diet("Carno")
+# p dino1
+
+
+# p dino1.roar
+# p dino1.welcome
+
 # Write a class called Unicorn
 # it should have a dynamic name attribute
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
+class Unicorn
+    def initialize(name, color = silver)
+        @name = name
+        @color = color
+    end
 
+    def say(magic_talk)
+        "*~* #{magic_talk} *~*"
+    end
+ end
+
+charlie = Unicorn.new("Charlie", "white")
+p charlie
+p charlie.say("Ahh, they took my kidney!")
 
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
+
+class Vampire
+    def initialize(name, pet = "bat", thirsty = true)
+        @name = name
+        @pet = pet
+        @thirsty = thirsty
+    end
+
+    def drink
+        @thirsty = false
+    end
+end
+
+count = Vampire.new("Count")
+p count
+count.drink
+p count
+
 
 
 #  Write a Dragon class
